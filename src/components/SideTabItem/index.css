@@ -1,0 +1,36 @@
+.tab-item {
+  display: flex;
+  width: 189px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 38px;
+}
+.tab-btn {
+  background-color: transparent;
+  border-width: 0px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.active-tab-btn {
+  border-left: 4px solid blue;
+}
+.tab-img {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+.tab-text {
+  color: #505887;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+}
+.active-tab-text {
+  color: blue;
+}

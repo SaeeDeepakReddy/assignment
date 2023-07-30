@@ -1,0 +1,10 @@
+.dashboard-container {
+  display: flex;
+  padding-top: 10px;
+  font-family: 'Roboto';
+}
+.dashboard-right-bottom-container {
+  width: 1440px;
+  height: 1024px;
+  background: #f5f7fa;
+}

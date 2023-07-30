@@ -1,0 +1,45 @@
+.total-cd-container {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.credit-container {
+  width: 543px;
+  height: 190px;
+  padding: 25px 36px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-shrink: 0;
+  border-radius: 25px;
+  background: #fff;
+  margin-right: 30px;
+}
+.credit-amount {
+  color: #16dbaa;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.credit-title {
+  color: #718ebf;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.credit-img {
+  width: 182px;
+  height: 158px;
+}
+.debit-amount {
+  color: #fe5c73;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

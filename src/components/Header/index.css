@@ -1,0 +1,35 @@
+.header-container {
+  display: flex;
+  width: 1190px;
+  padding: 1px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.add-container {
+  display: flex;
+  padding: 6px 14px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #2d60ff;
+  color: white;
+  border-width: 0px;
+}
+.add-transaction-title {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 5px;
+}
