@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import {format} from 'date-fns'
 import collect from 'collect.js'
+import Cookies from 'js-cookie'
 import {
   BarChart,
   Bar,
@@ -22,6 +23,8 @@ class BarGraph extends Component {
   }
 
   getBarData = async () => {
+    const userId = Cookies.get('userId')
+    const role = userId === '3' ? 'admin' : 'user'
     const url =
       'https://bursting-gelding-24.hasura.app/api/rest/daywise-totals-7-days'
     const options = {
@@ -30,8 +33,8 @@ class BarGraph extends Component {
         'content-type': 'application/json',
         'x-hasura-admin-secret':
           'g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF',
-        'x-hasura-role': 'user',
-        'x-hasura-user-id': '5',
+        'x-hasura-role': `${role}`,
+        'x-hasura-user-id': `${userId}`,
       },
     }
     const response = await fetch(url, options)

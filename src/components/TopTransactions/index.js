@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
 
 import Loader from 'react-loader-spinner'
 
@@ -27,6 +28,8 @@ class TopTransactions extends Component {
     this.setState({
       apiStatus: apiStatusConstants.inProgress,
     })
+    const userId = Cookies.get('userId')
+    const role = userId === '3' ? 'admin' : 'user'
     const url =
       'https://bursting-gelding-24.hasura.app/api/rest/all-transactions?limit=3&offset=0'
     const options = {
@@ -35,8 +38,8 @@ class TopTransactions extends Component {
         'content-type': 'application/json',
         'x-hasura-admin-secret':
           'g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF',
-        'x-hasura-role': 'user',
-        'x-hasura-user-id': '4',
+        'x-hasura-role': `${role}`,
+        'x-hasura-user-id': `${userId}`,
       },
     }
     const response = await fetch(url, options)

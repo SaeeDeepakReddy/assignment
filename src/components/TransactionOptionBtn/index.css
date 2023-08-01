@@ -1,0 +1,18 @@
+.transaction-btn {
+  color: #718ebf;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  background-color: transparent;
+  border-width: 0px;
+  width: 139px;
+  height: 30px;
+}
+.active-transaction-btn {
+  color: #2d60ff;
+  border-bottom: 3px solid #2d60ff;
+  border-radius: 10px 10px 0px 0px;
+}

@@ -1,0 +1,52 @@
+.all-transactions-card {
+  display: inline-flex;
+  padding: 16px 30px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 25px;
+  background: #fff;
+}
+.all-transaction-table-headings-container {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #e2e2e2;
+  justify-content: space-around;
+  align-items: center;
+}
+.transactions-table-headings-name {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 500px;
+  margin-left: 80px;
+}
+.transactions-table-headings-category {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 200px;
+}
+.transactions-table-headings-date {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 150px;
+}
+.transactions-table-headings-amount {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 150px;
+}

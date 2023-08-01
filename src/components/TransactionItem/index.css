@@ -1,0 +1,56 @@
+.all-transaction-item-container {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.all-transaction-item-arrow-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+.all-transaction-item-title {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 500px;
+  margin-left: 80px;
+}
+.all-transaction-item-category {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 200px;
+  margin-left: 400px;
+}
+.all-transaction-item-date {
+  color: #343c6a;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 800px;
+  margin-left: 200px;
+}
+.all-transaction-item-amount {
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  width: 150px;
+  margin-left: 100px;
+}
+.credit {
+  color: #16dbaa;
+}
+.debit {
+  color: #fe5c73;
+}

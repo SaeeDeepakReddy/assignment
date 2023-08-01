@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import Cookies from 'js-cookie'
 
 import collect from 'collect.js'
 
@@ -15,6 +16,8 @@ class TotalCDs extends Component {
   }
 
   getTotalCrDeb = async () => {
+    const userId = Cookies.get('userId')
+    const role = userId === '3' ? 'admin' : 'user'
     const url =
       'https://bursting-gelding-24.hasura.app/api/rest/credit-debit-totals'
     const options = {
@@ -23,8 +26,8 @@ class TotalCDs extends Component {
         'content-type': 'application/json',
         'x-hasura-admin-secret':
           'g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF',
-        'x-hasura-role': 'user',
-        'x-hasura-user-id': '1',
+        'x-hasura-role': `${role}`,
+        'x-hasura-user-id': `${userId}`,
       },
     }
     const response = await fetch(url, options)

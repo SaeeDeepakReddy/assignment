@@ -4,6 +4,7 @@ import LoginForm from './components/LoginForm'
 import NotFound from './components/NotFound'
 import Dashboard from './components/Dashboard'
 import Profile from './components/Profile'
+import Transactions from './components/Transactions'
 
 import './App.css'
 
@@ -13,6 +14,7 @@ const App = () => (
       <Route exact path="/login" component={LoginForm} />
       <Route exact path="/dashboard" component={Dashboard} />
       <Route exact path="/profile" component={Profile} />
+      <Route exact path="/transactions" component={Transactions} />
       <Route path="/not-found" component={NotFound} />
       <Redirect to="not-found" />
     </Switch>

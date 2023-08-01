@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom'
 import {FiLogOut} from 'react-icons/fi'
 import {RxCross2} from 'react-icons/rx'
 import Popup from 'reactjs-popup'
+import Cookies from 'js-cookie'
 
 import './index.css'
 
@@ -16,6 +17,8 @@ class ProfileDetails extends Component {
   }
 
   getProfile = async () => {
+    const userId = Cookies.get('userId')
+    const role = userId === '3' ? 'admin' : 'user'
     const apiUrl = 'https://bursting-gelding-24.hasura.app/api/rest/profile'
     const options = {
       method: 'GET',
@@ -23,14 +26,15 @@ class ProfileDetails extends Component {
         'content-type': 'application/json',
         'x-hasura-admin-secret':
           'g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF',
-        'x-hasura-role': 'user',
-        'x-hasura-user-id': '1',
+        'x-hasura-role': `${role}`,
+        'x-hasura-user-id': `${userId}`,
       },
     }
     const response = await fetch(apiUrl, options)
     if (response.ok) {
       const fetchedData = await response.json()
-      const profileData = fetchedData.users[0]
+      const index = userId === '3' ? 2 : 0
+      const profileData = fetchedData.users[index]
       const updatedData = {
         name: profileData.name,
         email: profileData.email,
@@ -41,6 +45,7 @@ class ProfileDetails extends Component {
 
   onClickLogout = () => {
     const {history} = this.props
+    Cookies.remove('userId')
     history.replace('/login')
   }
 

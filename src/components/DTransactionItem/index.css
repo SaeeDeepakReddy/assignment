@@ -20,7 +20,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-left: 50px;
+  width: 500px;
+  margin-left: 80px;
 }
 .transaction-item-category {
   color: #718ebf;
@@ -29,7 +30,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 200px;
+  margin-left: 10px;
+  width: 200px;
 }
 .transaction-item-date {
   color: #718ebf;
@@ -38,7 +40,8 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-left: 80px;
+  margin-left: 50px;
+  width: 800px;
 }
 .transaction-item-amount {
   text-align: right;
@@ -47,7 +50,8 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-left: 100px;
+  margin-left: 10px;
+  width: 100px;
 }
 .credit {
   color: #16dbaa;
