@@ -15,7 +15,10 @@
   width: 100%;
 }
 .active-tab-btn {
-  border-left: 4px solid blue;
+  border: 4px solid blue;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
 }
 .tab-img {
   height: 25px;
@@ -33,4 +36,7 @@
 }
 .active-tab-text {
   color: blue;
+}
+.tab-link {
+  text-decoration: none;
 }

@@ -9,6 +9,7 @@
   border-right: 1px solid #e2e2e2;
   background: #fff;
 }
+
 .logo-container {
   display: flex;
   margin-left: 24px;
@@ -39,4 +40,7 @@
 ul {
   list-style-type: none;
   padding-left: 0px;
+  width: 207px;
+  height: 171px;
+  flex-shrink: 0;
 }

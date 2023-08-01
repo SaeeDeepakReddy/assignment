@@ -1,5 +1,7 @@
 import {Component} from 'react'
 
+import collect from 'collect.js'
+
 import './index.css'
 
 class TotalCDs extends Component {
@@ -28,15 +30,24 @@ class TotalCDs extends Component {
     const response = await fetch(url, options)
     if (response.ok) {
       const data = await response.json()
-      const credited = data.totals_credit_debit_transactions.filter(
-        each => each.type === 'credit',
-      )
-      const debited = data.totals_credit_debit_transactions.filter(
-        each => each.type === 'debit',
-      )
-      console.log(debited[0].sum)
+      const credited = data.totals_credit_debit_transactions.map(each => {
+        if (each.type === 'credit') {
+          return each.sum
+        }
+        return 0
+      })
+      const debited = data.totals_credit_debit_transactions.map(each => {
+        if (each.type === 'debit') {
+          return each.sum
+        }
+        return 0
+      })
+      console.log(debited)
 
-      this.setState({credit: credited[0].sum, debit: debited[0].sum})
+      this.setState({
+        credit: collect(credited).sum(),
+        debit: collect(debited).sum(),
+      })
     }
   }
 

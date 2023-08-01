@@ -26,21 +26,23 @@ class LoginForm extends Component {
     history.replace('/dashboard')
   }
 
-  onSubmitFailure = errorMsg => {
-    this.setState({showSubmitError: true, errorMsg})
+  onSubmitFailure = () => {
+    this.setState({showSubmitError: true, errorMsg: 'Invalid Credentials'})
   }
 
   submitForm = async event => {
     event.preventDefault()
     const {username, password} = this.state
-    const url = `https://bursting-gelding-24.hasura.app/api/rest/get-user-id?email=${username}&password=${password}`
+    const userDetails = {email: username, password}
+    const url = `https://bursting-gelding-24.hasura.app/api/rest/get-user-id`
     const options = {
-      method: 'GET',
+      method: 'POST',
       headers: {
         'content-type': 'application/json',
         'x-hasura-admin-secret':
           'g08A3qQy00y8yFDq3y6N1ZQnhOPOa4msdie5EtKS1hFStar01JzPKrtKEzYY2BtF',
       },
+      body: JSON.stringify(userDetails),
     }
     const response = await fetch(url, options)
     const data = await response.json()
@@ -48,7 +50,7 @@ class LoginForm extends Component {
     if (response.ok === true) {
       this.onSubmitSuccess(data.get_user_id[0].id)
     } else {
-      this.onSubmitFailure(data.error_msg)
+      this.onSubmitFailure()
     }
   }
 

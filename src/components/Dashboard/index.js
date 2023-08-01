@@ -1,8 +1,10 @@
 import {Component} from 'react'
 
-import SideBar from '../SideBar'
+import NavSideBar from '../NavSideBar'
 import Header from '../Header'
 import TotalCDs from '../TotalCDs'
+import TopTransactions from '../TopTransactions'
+import BarGraph from '../BarGraph'
 
 import './index.css'
 
@@ -10,12 +12,18 @@ class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard-container">
-        <SideBar />
+        <NavSideBar tabId="DASHBOARD" />
         <div>
-          <Header />
+          <Header name="Accounts" />
           <div className="dashboard-right-bottom-container">
-            <div>
-              <TotalCDs />
+            <TotalCDs />
+            <h1 className="last-transaction-title">Last Transaction</h1>
+            <div className="transactions-container">
+              <TopTransactions />
+            </div>
+            <h1 className="overview-title">Debit & Credit Overview</h1>
+            <div className="bar-graph-container">
+              <BarGraph />
             </div>
           </div>
         </div>

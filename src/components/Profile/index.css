@@ -1,0 +1,42 @@
+.dashboard-container {
+  display: flex;
+  padding-top: 10px;
+  font-family: 'Roboto';
+}
+
+.A img {
+  height: 200px;
+  width: 200px;
+  border-radius: 100px;
+  margin-right: 70px;
+}
+.B {
+  display: flex;
+  border-radius: 25px;
+  background: #f5f7fa;
+  margin-left: 30px;
+  padding: 20px;
+}
+.C {
+  display: inline-block;
+  margin-right: 70px;
+}
+.C label {
+  padding: 10px;
+}
+.C input {
+  margin: 10px;
+  width: 300px;
+  height: 40px;
+}
+.D {
+  display: inline-block;
+}
+.D label {
+  padding: 10px;
+}
+.D input {
+  margin: 10px;
+  width: 300px;
+  height: 40px;
+}
